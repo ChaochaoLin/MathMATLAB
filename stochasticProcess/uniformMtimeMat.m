@@ -1,7 +1,8 @@
 function [ Mtime ] = uniformMtimeMat( R, T, epsilon )
 %UNIFORMMTIMEMAT computes M(T) within a given numerical accuracy
 %   Mtime = uniformMtimeMat(R, T, epsilon) computes occupancy time M(T) for
-%   a CTMC with rate matrix R and numerical accuracy epsilon.
+%   a CTMC with rate matrix R and numerical accuracy epsilon with Uniformi-
+%   zation Algorithm.
 %   R: rate matrix
 %   T: time duration
 %   epsilon: numerical accuracy
