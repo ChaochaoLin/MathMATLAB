@@ -9,10 +9,12 @@ function [ R ] = rateMat( lambda, mu, H, M )
 
 K = M + H;
 R = zeros(K + 1);
-for i=0:K
-    R(i+1, i+1) = lambda;
-    R(i+1, i) = mu * min(i, M);
+for i=0:K-1
+    R(i+1, i+2) = lambda;
 end
 
+for i=1:K
+    R(i+1,i) = mu * min(i, M);
+end
 end
 
